@@ -8,7 +8,8 @@ class BookGenerator : Gen<Book> {
   override fun random() = generateSequence {
     Book(
       Gen.string().random().first(),
-      Gen.string().random().first()
+      Gen.string().random().first(),
+      Gen.int().random().first()
     )
   }
 }

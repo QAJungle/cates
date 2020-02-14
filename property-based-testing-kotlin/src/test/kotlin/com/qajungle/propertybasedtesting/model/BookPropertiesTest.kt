@@ -8,7 +8,7 @@ class BookPropertiesTest : StringSpec ({
 
   "book response info is a concatenation of book data" {
     forAll(3000, BookGenerator()) { book: Book ->
-      book.toResponse().info == ("${book.isbn}::${book.name}")
+      book.toResponse().info == book.isbn + "::" + book.name + "::" + book.quantity
     }
   }
 })
